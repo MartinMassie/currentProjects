@@ -30,5 +30,10 @@ public class AddressBook
 		book1.addBuddy(buddy1);
 		book1.removeBuddy("Peter S");
 	}
+	
+	private void obliviate()
+	{
+		
+	}
 }
-//test : eddited from GitHub
+//test : edited from GitHub
