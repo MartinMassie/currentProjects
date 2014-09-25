@@ -31,3 +31,4 @@ public class AddressBook
 		book1.removeBuddy("Peter S");
 	}
 }
+//test : eddited from GitHub
