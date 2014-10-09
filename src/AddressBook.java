@@ -3,9 +3,11 @@ import java.util.HashMap;
 
 public class AddressBook 
 {
+	String name;
 	HashMap<String, BuddyInfo> buddies;
-	public AddressBook()
+	public AddressBook(String name)
 	{
+		this.name = name;
 		buddies = new HashMap<>();
 	}
 	
@@ -21,14 +23,6 @@ public class AddressBook
 	public BuddyInfo getBuddy(String name)
 	{
 		return buddies.get(name);
-	}
-	public static void main(String[] args) 
-	{
-		System.out.println("Address Book");
-		BuddyInfo buddy1 = new BuddyInfo("Peter S", "Kuait", "6131234567");
-		AddressBook book1 = new AddressBook();
-		book1.addBuddy(buddy1);
-		book1.removeBuddy("Peter S");
 	}
 }
 //test : eddited from GitHub
