@@ -1,28 +1,48 @@
-import java.util.HashMap;
+import javax.swing.DefaultListModel;
 
 
 public class AddressBook 
 {
 	String name;
-	HashMap<String, BuddyInfo> buddies;
+	//HashMap<String, BuddyInfo> buddies;
+	DefaultListModel<BuddyInfo> buddies;
 	public AddressBook(String name)
 	{
 		this.name = name;
-		buddies = new HashMap<>();
+		buddies = new DefaultListModel<>();
 	}
 	
 	public void addBuddy(BuddyInfo newBuddy)
 	{
-		buddies.put(newBuddy.getName(), newBuddy);		
+		buddies.addElement(newBuddy);		
 	}
 	
-	public BuddyInfo removeBuddy(String name)
+	public boolean removeBuddy(BuddyInfo buddy)
 	{
-		return buddies.remove(name);		
+		return buddies.removeElement(buddy);		
 	}
-	public BuddyInfo getBuddy(String name)
+	
+	public DefaultListModel<BuddyInfo> getBuddy(String name)
 	{
-		return buddies.get(name);
+		return buddies;
 	}
+	
+	public String toString()
+	{
+		return name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public DefaultListModel<BuddyInfo> getBuddies() {
+		return buddies;
+	}
+	
 }
 //test : eddited from GitHub
